@@ -1,4 +1,4 @@
-# Personalized Adaptive Learning Tutor
+# 🎓 Personalized Adaptive Learning Tutor
 
 **CE509 Agentic AI • Computer DLOC Lab-I • PS No. 4**
 
