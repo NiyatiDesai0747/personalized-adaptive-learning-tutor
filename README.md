@@ -2,7 +2,7 @@
 
 **CE509 Agentic AI • Computer DLOC Lab-I • PS No. 4**
 
-This is the final submission-ready Windows build. It contains the complete deterministic tutor workflow and **does not include a virtual environment or generated database**, so it avoids copying long `site-packages` paths into the project.
+This project implements a Personalized Adaptive Learning Tutor using a multi-agent approach. The tutor assesses the learner, creates a personalized learning path, provides teaching and practice activities, evaluates quiz performance, and selects the next learning step based on the learner's performance and stored mastery.
 
 ## Windows setup — easiest method
 
