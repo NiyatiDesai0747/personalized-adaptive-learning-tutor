@@ -1,71 +1,60 @@
-# 🎓 Personalized Adaptive Learning Tutor — FINAL CLEAN BUILD
+# Personalized Adaptive Learning Tutor
 
 **CE509 Agentic AI • Computer DLOC Lab-I • PS No. 4**
 
 This project implements a Personalized Adaptive Learning Tutor using a multi-agent approach. The tutor assesses the learner, creates a personalized learning path, provides teaching and practice activities, evaluates quiz performance, and selects the next learning step based on the learner's performance and stored mastery.
 
-## Windows setup — easiest method
+## Windows Setup
 
-1. Extract the ZIP.
+1. Extract the ZIP file.
 2. Open the extracted **Tutor** folder.
 3. Double-click **SETUP_AND_RUN.bat**.
-4. The script automatically detects `python` (and falls back to `py` if available), creates the clean environment at `%USERPROFILE%\TutorVenv`, installs the requirements, and starts Streamlit.
+4. The script detects Python, creates a virtual environment at `%USERPROFILE%\TutorVenv`, installs the required packages, and starts the Streamlit application.
 
-You do **not** need to create or activate a virtual environment manually.
+There is no need to create or activate the virtual environment manually.
 
-## Final learner profile
+## Learner Profile Used for Testing
 
 - **Student Name:** Niyati
 - **Subject:** Python Programming
-- **Current Level:** Beginner
+- **Level:** Beginner
 - **Learning Goal:** Understand Python concepts deeply, apply them to practical problems, and improve problem-solving.
-- **Current knowledge / struggle:** I know basic Python syntax, variables, data types, and conditional statements. I struggle with loops, functions, parameters, return values, and applying concepts to problem-solving.
+- **Existing Knowledge:** Basic Python syntax, variables, data types, and conditional statements.
+- **Difficulty Areas:** Loops, functions, parameters, return values, and problem-solving.
 - **Confidence:** Moderate
 - **Topic:** Python Loops and Functions
 
-## Complete workflow
+## Workflow
 
-**Learner Profile → Assessment → Personalized 9-Stage Path → Level-Adaptive Teaching → Guided/Independent/Challenge Practice → 20-Question Quiz → Evaluation & Feedback → Adaptation → Automatic Next Plan → Persistent Memory → Agent Trace → Continue**
+**Learner Profile → Assessment → Learning Path → Teaching → Practice → Quiz → Evaluation & Feedback → Adaptation → Next Learning Plan → Persistent Memory → Agent Trace**
 
-## Included features
+## Main Features
 
-- Learner profile with Beginner / Intermediate / Advanced levels
-- Assessment Agent with strengths, gaps, prerequisites, readiness and recommended start
-- Personalized 9-stage Learning Path Agent driven by stored mastery
-- **Real level-adaptive teaching content**
-  - Beginner: simple explanations, basic examples, guided checks
-  - Intermediate: deeper concepts, practical combinations, trade-offs and edge cases
-  - Advanced: engineering reasoning, edge cases, alternative approaches and challenging transfer
-- Changing learner level regenerates teaching content instead of reusing the old lesson
-- Guided → Independent → Challenge Practice Agent
-- Exactly 20-question adaptive Quiz Agent
-- Evaluation & Feedback Agent
-- Concept-level mastery updates and question-wise error analysis
-- Adaptation Agent
-- **Automatic next-plan selection from stored mastery**
-- Mastered concepts are deprioritized; weaker concepts are selected for remediation/practice
-- **Automatic routing after Apply Adaptive Decision**
-  - Remediation / Acceleration → Teaching Agent for the next concept
-  - Targeted Practice → Practice Agent
-- Teaching page automatically opens the selected adaptive concept and current learner level
-- Persistent SQLite Learning Memory
-- Learning History
-- Multi-Agent Communication & Decision Trace
+- Learner profile with Beginner, Intermediate, and Advanced levels
+- Assessment Agent for identifying strengths, gaps, prerequisites, and readiness
+- Personalized 9-stage learning path
+- Teaching content based on the learner's current level
+- Guided, Independent, and Challenge practice
+- 20-question quiz
+- Evaluation and feedback
+- Concept-level mastery and question-wise error analysis
+- Adaptation Agent for selecting the next learning action
+- Automatic selection of the next concept based on stored mastery
+- Mastered concepts are given lower priority while weaker concepts are prioritized
+- Automatic routing to Teaching or Practice based on the adaptation decision
+- SQLite-based persistent learning memory
+- Learning history
+- Multi-agent communication and decision trace
 - JSON learning-state export
-- Optional OpenAI API enhancement with deterministic fallback
-- No API key required for the deterministic lab demonstration
+- Optional OpenAI API support
+- Deterministic fallback when an API key is not available
 
-## Manual run
+## Manual Run
 
-If you prefer CMD and already have Python installed:
+If Python is already installed, the application can also be run from Command Prompt:
 
-```bat
+```text
 cd /d C:\path\to\Tutor
 python -m venv "%USERPROFILE%\TutorVenv"
 "%USERPROFILE%\TutorVenv\Scripts\python.exe" -m pip install -r requirements.txt
 "%USERPROFILE%\TutorVenv\Scripts\python.exe" -m streamlit run app.py
-```
-
-## Important
-
-Do not include a real API key in the ZIP or commit one to GitHub.
